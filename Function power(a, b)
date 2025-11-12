@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+double power(double a, int b) {
+    double result = 1;
+    for(int i = 1; i <= b; i++)
+        result *= a;
+    return result;
+}
+
+int main() {
+    double a;
+    int b;
+    printf("Enter base and exponent: ");
+    scanf("%lf %d", &a, &b);
+
+    printf("%.2lf^%d = %.2lf\n", a, b, power(a, b));
+    return 0;
+}
